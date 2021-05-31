@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>A minha segunda app em React</title>
+
+    <!-- recursos necessários para uma aplicação REACT standalone-->
+    <!-- 
+   https://github.com/facebook/react/releases
+   https://babeljs.io/docs/en/
+-->
+    <script src="https://unpkg.com/react@^17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.14.3/babel.min.js"></script>
+</head>
+
+<body>
+    <!-- nesta DIV o React irá injetar os conteúdos por ele gerados -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        // criar um COMPONENTE para adicionar mais funcionalidades
+        class App extends React.Component {
+            render() {
+                return <div>
+                    <h1>A minha segunda <i>app</i> em React</h1>
+                    <p>O render só consegue procesar um único elemento.</p>
+                    <p>Este exemplo é útil para inserir REACT numa aplicação já existente</p>
+                </div>
+            }
+        }
+
+        ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        )
+
+    </script>
+</body>
+
+</html>
